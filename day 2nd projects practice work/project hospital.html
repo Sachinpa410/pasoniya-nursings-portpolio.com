@@ -1,0 +1,274 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareWell Hospital</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;color:#15365b;background:#f3f8fe}
+.top{background:#074879;color:white;padding:10px 6%;font-size:13px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+header{background:white;padding:18px 6%;display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.logo{font-size:25px;font-weight:bold;color:#0875cb}
+.logo small{display:block;font-size:11px;color:#64748b;font-weight:normal}
+nav{display:flex;gap:18px;flex-wrap:wrap}
+nav a{text-decoration:none;color:#15365b;font-weight:bold;font-size:14px}
+nav a:hover{color:#0875cb}
+.btn{display:inline-block;border:0;border-radius:8px;background:#087bd1;color:white;padding:13px 20px;text-decoration:none;font-weight:bold;cursor:pointer}
+.btn:hover{background:#075ba0}
+.hero{padding:65px 6%;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px;background:linear-gradient(120deg,#e0f3ff,#fff)}
+.hero h1{font-size:clamp(35px,5vw,58px);line-height:1.1;margin:15px 0}
+.hero h1 span{color:#087bd1}
+.hero p{color:#536b83;line-height:1.8;margin-bottom:24px}
+.hero img{width:100%;height:350px;object-fit:cover;border-radius:22px}
+.eyebrow{font-size:13px;color:#087bd1;font-weight:bold;letter-spacing:2px}
+.stats{margin:25px 6%;background:white;padding:24px;border-radius:15px;display:grid;grid-template-columns:repeat(4,1fr);gap:15px;text-align:center;box-shadow:0 5px 20px #1648750c}
+.stats strong{display:block;color:#087bd1;font-size:24px}
+.stats span{font-size:13px;color:#64748b}
+section.content{padding:50px 6%}
+.heading{text-align:center;margin-bottom:30px}
+.heading h2{font-size:32px;margin-bottom:8px}
+.heading p{color:#64748b}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:white;border:1px solid #e0ebf5;border-radius:14px;padding:25px;box-shadow:0 5px 20px #16487508}
+.card .emoji{font-size:35px}
+.card h3{margin:12px 0;color:#075ba0}
+.card p{color:#64748b;line-height:1.7}
+.doctors .card{text-align:center}
+.doctors .emoji{font-size:45px;background:#e5f4ff;padding:15px;border-radius:50%;display:inline-block}
+.booking{background:#e6f4ff;padding:55px 6%}
+.bookbox{max-width:850px;margin:auto;background:white;padding:30px;border-radius:18px;box-shadow:0 10px 35px #16487512}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{display:flex;flex-direction:column;gap:7px}
+.full{grid-column:1/-1}
+label{font-size:14px;font-weight:bold}
+input,select,textarea{width:100%;padding:13px;border:1px solid #cbd9e8;border-radius:7px;font:inherit;background:#fff}
+input:focus,select:focus,textarea:focus{outline:2px solid #087bd1}
+#result{display:none;background:#e9fff1;border:1px solid #9bd9b0;padding:20px;margin-top:20px;border-radius:10px;overflow-wrap:anywhere}
+#result h3{color:#167444}
+footer{background:#07365e;color:white;text-align:center;padding:30px 6%}
+footer p{margin-top:8px;color:#c7dced;font-size:13px}
+@media(max-width:750px){
+ .hero{grid-template-columns:1fr;padding-top:40px}
+ .hero img{height:260px}
+ .stats{grid-template-columns:1fr 1fr}
+ .grid{grid-template-columns:1fr}
+ header{justify-content:center}
+ nav{justify-content:center}
+ form{grid-template-columns:1fr}
+ .full{grid-column:auto}
+ .bookbox{padding:20px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+<span>☎ +91 8224896083 | info@pasoniyahospital.com</span>
+<span>Mon–Sat: 9 AM–8 PM | Emergency: 24/7</span>
+</div>
+
+<header>
+<div class="logo">✚ Pasoniya Nursing home Hospital
+<small>Healing Today • Healthier Tomorrow</small></div>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#departments">Departments</a>
+<a href="#doctors">Doctors</a>
+<a href="#appointment">Appointment</a>
+</nav>
+<a class="btn" href="#appointment">Book Appointment</a>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div>
+<div class="eyebrow">TRUSTED HEALTHCARE FOR EVERYONE</div>
+<h1>Your Health<br><span>Our Priority</span></h1>
+<p>Experience quality healthcare with experienced doctors, modern facilities and compassionate patient care.</p>
+<a href="#appointment" class="btn">Book Appointment →</a>
+</div>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbMwK2qf5CnQYWVqAWjnUcgmwhkUxD2vTKgpxbx2U7jyx7eQG-RYB1dWSu&s=10">
+</section>
+
+<div class="stats" id="about">
+<div><strong>24/7</strong><span>Emergency Care</span></div>
+<div><strong>Expert</strong><span>Medical Team</span></div>
+<div><strong>Modern</strong><span>Facilities</span></div>
+<div><strong>Patient</strong><span>First Approach</span></div>
+</div>
+
+<section class="content" id="departments">
+<div class="heading">
+<div class="eyebrow">OUR DEPARTMENTS</div>
+<h2>Specialized Care for Every Need</h2>
+<p>Find the right department for your healthcare needs.</p>
+</div>
+<div class="grid">
+<div class="card"><div class="emoji">❤️</div><h3>Cardiology</h3><p>Heart health consultations and cardiac care.</p></div>
+<div class="card"><div class="emoji">🩺</div><h3>General and Laparocopic Surgen</h3><p>Routine checkups,Specific treatment surgery .</p></div>
+<div class="card"><div class="emoji">👶</div><h3>Pediatrics</h3><p>Healthcare for infants and children.</p></div>
+<div class="card"><div class="emoji">🦴</div><h3>Orthopedics</h3><p>Bone, joint and mobility care.</p></div>
+<div class="card"><div class="emoji">🧠</div><h3>Neurology</h3><p>Brain and nervous system consultations.</p></div>
+<div class="card"><div class="emoji">🦷</div><h3>Dentistry</h3><p>Dental checkups and oral healthcare.</p></div>
+</div>
+</section>
+
+<section class="content doctors" id="doctors" style="background:#eaf5ff">
+<div class="heading">
+<div class="eyebrow">OUR DOCTORS</div>
+<h2>Meet Our Medical Team</h2>
+<p>Sample profiles — replace with your hospital's actual doctors.</p>
+</div>
+<div class="grid">
+<div class="card">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8wFRp8_ew3NcfbMlBtFZ0Hj2AsHwIlIa9OKGU45J6XA&s=10"><h3>Dr.Rajbhor pal</h3><p>General Medicin</p></div>
+<div class="card">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbFzAXvdTbIVN5f9OH1QX1DJrDndX2Junh1dYw-o4Xww&s=10" width="200"><h3>Dr. Priya Verma</h3><p>Cardiology</p></div>
+<div class="card">
+  <img src="https://assets.meradoc.com/pdf/1775196497961-48b2e6602a12f-292248.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAWYFT3B76N26E4DNS%2F20261016%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20261016T151704Z&X-Amz-Expires=14400&X-Amz-Signature=f1ae74728a7a551e1c5fcb242fbc7f9e91e9523a22209c91e6a20211368c1f03&X-Amz-SignedHeaders=host"width=200><h3>Dr. sachin pal</h3><p>Pediatrics</p></div>
+</div>
+</section>
+
+<section class="booking" id="appointment">
+<div class="heading">
+<div class="eyebrow">ONLINE REGISTRATION</div>
+<h2>Book Your Appointment</h2>
+<p>Complete the form to generate a demo appointment token.</p>
+</div>
+
+<div class="bookbox">
+<form id="bookingForm">
+<div class="field">
+<label for="name">Patient Full Name *</label>
+<input id="name" name="name" placeholder="Enter full name" required>
+</div>
+
+<div class="field">
+<label for="phone">Mobile Number *</label>
+<input id="phone" name="phone" type="tel" inputmode="numeric"
+pattern="[6-9][0-9]{9}" placeholder="10-digit mobile number" required>
+</div>
+
+<div class="field">
+<label for="department">Department *</label>
+<select id="department" name="department" required>
+<option value="">Choose Department</option>
+<option>Cardiology</option>
+<option>General and Laparoscopic Surgeon</option>
+<option>Pediatrics</option>
+<option>Orthopedics</option>
+<option>Neurology</option>
+<option>Dentistry</option>
+</select>
+</div>
+
+<div class="field">
+<label for="doctor">Doctor *</label>
+<select id="doctor" name="doctor" required>
+<option value="">Choose Doctor</option>
+<option>Dr. Rajbhor pal</option>
+<option>Dr. Priya Verma</option>
+<option>Dr. sachin pal</option>
+</select>
+</div>
+
+<div class="field">
+<label for="date">Appointment Date *</label>
+<input type="date" id="date" name="date" required>
+</div>
+
+<div class="field">
+<label for="time">Preferred Time *</label>
+<select id="time" name="time" required>
+<option value="">Choose Time</option>
+<option>09:00 AM</option>
+<option>10:00 AM</option>
+<option>11:00 AM</option>
+<option>12:00 PM</option>
+<option>02:00 PM</option>
+<option>03:00 PM</option>
+<option>04:00 PM</option>
+</select>
+</div>
+
+<div class="field full">
+<label for="reason">Reason for Visit (Optional)</label>
+<textarea id="reason" name="reason" rows="3" placeholder="Enter reason for visit"></textarea>
+</div>
+
+<div class="field full">
+<button class="btn" type="submit">Confirm Appointment Request</button>
+</div>
+</form>
+
+<div id="result" role="status" aria-live="polite">
+<h3>Appointment Request Created!</h3>
+<p id="token"></p>
+<p id="details"></p>
+<p style="margin-top:12px;font-size:13px">Demo only: this token is not issued by a real hospital. Please contact the hospital to confirm your appointment.</p>
+<button class="btn" type="button" onclick="window.print()" style="margin-top:15px">Print Details</button>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<h2>✚ Pasoniya Nursing home Hospital</h2>
+<p>Quality Care • Compassion • Better Health</p>
+<p>Address: Boda Bag Housing Board Colony, Vidya Nagar Colony, opposite Church Boda Road, Rewa, Madhy</p>
+<p>© 2026 pasoniya nursing home Hospital. All rights reserved.</p>
+</footer>
+
+<script>
+const dateField = document.getElementById("date");
+const now = new Date();
+const today = now.getFullYear() + "-" +
+String(now.getMonth()+1).padStart(2,"0") + "-" +
+String(now.getDate()).padStart(2,"0");
+
+dateField.min = today;
+
+document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    if (!this.reportValidity()) return;
+
+    if (dateField.value < today) {
+        alert("Please select today or a future date.");
+        return;
+    }
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value;
+    const dept = document.getElementById("department").value;
+    const doctor = document.getElementById("doctor").value;
+    const date = dateField.value;
+    const time = document.getElementById("time").value;
+
+    if (!name) {
+        alert("Please enter your name.");
+        return;
+    }
+
+    const token = "CW-" + Date.now().toString().slice(-8);
+
+    document.getElementById("token").textContent = "Demo Token: " + token;
+    document.getElementById("details").textContent =
+        "Patient: " + name + " | Mobile: " + phone +
+        " | Department: " + dept + " | Doctor: " + doctor +
+        " | Date: " + date + " | Time: " + time;
+
+    document.getElementById("result").style.display = "block";
+    document.getElementById("result").scrollIntoView({
+        behavior: "smooth", block: "center"
+    });
+});
+</script>
+</body>
+</html>
